@@ -1,0 +1,3 @@
+Pour bloquer une pull request vers master si la CI echoue, nous allons 
+sur le compte Github dans 'Settings' puis 'Branches' ensuite je clique 
+sur 'Add Rule', et je coche sur 'Require pull request reviews before merging'.
