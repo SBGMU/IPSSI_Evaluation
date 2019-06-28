@@ -1,3 +1,17 @@
 language: node_js
 node_js:
   - "12"
+
+before_install : 
+  - npm ./node_modules/.bin/JsHint src
+  - ./node_modules/.bin/retire
+  - ./node_modules/.bin/Twly
+
+cache : npm
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: travis encrypt 0b136b33-acc9-4def-8c0e-4053fccc0eb2 --add deploy.api_key --pro
+
+#Je n'ai pas pu installer Travis dû au manque de temps nécessaire pour mettre en place Travis#
